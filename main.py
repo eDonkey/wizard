@@ -4,7 +4,8 @@ import os
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, origins=["https://wizard-dusky.vercel.app"])
+
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
