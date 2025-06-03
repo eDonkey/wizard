@@ -18,7 +18,7 @@ async function submitForm() {
     descripcion: estilo_preferido + " " + colores + " " + descripcion
   };
 
-  const res = await fetch('https://visual-backend.onrender.com/api/sugerencia', {
+  const res = await fetch('https://wizard-mb0m.onrender.com/api/sugerencia', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
