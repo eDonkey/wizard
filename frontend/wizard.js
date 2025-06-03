@@ -18,7 +18,7 @@ async function submitForm() {
     descripcion: estilo_preferido + " " + colores + " " + descripcion
   };
 
-  const res = await fetch('https://wizard-mb0m.onrender.com/api/sugerencia', {
+  const res = await fetch('https://wizard-7ef613abb7b7.herokuapp.com/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(payload)
