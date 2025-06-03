@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Visual Style Wizard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Asistente de Estilo Visual</h1>
+    <div id="wizard">
+      <div class="step active" data-step="1">
+        <label>¿Cómo te sentís hoy?</label>
+        <textarea id="emociones" required></textarea>
+        <button onclick="nextStep()">Siguiente</button>
+      </div>
+      <div class="step" data-step="2">
+        <label>¿Qué estilo visual te atrae más?</label>
+        <textarea id="estilo_preferido"></textarea>
+        <button onclick="nextStep()">Siguiente</button>
+      </div>
+      <div class="step" data-step="3">
+        <label>¿Colores preferidos o a evitar?</label>
+        <textarea id="colores"></textarea>
+        <button onclick="nextStep()">Siguiente</button>
+      </div>
+      <div class="step" data-step="4">
+        <label>¿Descripción general o meta del diseño?</label>
+        <textarea id="descripcion"></textarea>
+        <button onclick="submitForm()">Generar estilo visual</button>
+      </div>
+    </div>
+    <div id="resultado" class="resultado oculto">
+      <h2>Resultado generado</h2>
+      <pre id="respuesta-json"></pre>
+      <button onclick="descargarPDF()">Descargar como PDF</button>
+    </div>
+  </div>
+
+  <script src="wizard.js"></script>
+  <script src="html2pdf.bundle.min.js"></script>
+</body>
+</html>
